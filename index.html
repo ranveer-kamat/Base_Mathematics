@@ -1,199 +1,347 @@
-<!-- 
-  Graphy जैसे प्लेटफॉर्म के लिए फाइनल, आकर्षक और बेहतर HTML।
-  यह संस्करण छात्रों को खरीदने के लिए मजबूर करने के लिए डिज़ाइन किया गया है।
--->
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base of All Mathematics Course - Y.P. Sahu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #f0f0f0;
+            border-radius: 0.75rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .gradient-text {
+            background: -webkit-linear-gradient(45deg, #2563eb, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .price-strike {
+            text-decoration: line-through;
+            text-decoration-color: #ef4444;
+            text-decoration-thickness: 2px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-700">
 
-<!-- Header -->
-<header style="background-color: #ffffff; padding: 1rem; border-bottom: 1px solid #e2e8f0; text-align: center; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-    <div style="display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 0 1rem;">
-        <h1 style="font-size: 1.5rem; font-weight: bold; color: #1e293b; font-family: sans-serif;">Y.P. Sahu</h1>
-        <a href="https://ypsahu.com/single-checkout/685ef965d331d71b43104b06?pid=p4" target="_blank" style="background-color: #f97316; color: white; font-weight: 600; padding: 0.6rem 1.2rem; border-radius: 0.5rem; text-decoration: none; font-family: sans-serif;">अभी एनरोल करें</a>
-    </div>
-</header>
+    <!-- Header -->
+    <header class="bg-white/80 backdrop-blur-lg shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 sm:px-6 py-3 flex justify-between items-center">
+            <a href="https://ypsahu.com" target="_blank" class="text-xl font-bold text-slate-800">Y.P. Sahu</a>
+            <div class="flex items-center gap-4">
+                 <a href="https://ypsahu.com" target="_blank" class="hidden sm:block text-slate-600 hover:text-blue-600 font-semibold">Home</a>
+                 <a href="#demo" class="hidden sm:block text-slate-600 hover:text-blue-600 font-semibold">Demo</a>
+                 <a href="#enroll" class="bg-blue-600 text-white font-semibold px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm sm:text-base">
+                    अभी एनरोल करें
+                 </a>
+            </div>
+        </nav>
+    </header>
 
-<!-- Main Content -->
-<main style="font-family: sans-serif; color: #334155; line-height: 1.6;">
-    <!-- Hero Section -->
-    <section style="text-align: center; padding: 4rem 1.5rem; background-color: #fff7ed;">
-        <div>
-            <h2 style="font-weight: 600; color: #c2410c; margin-bottom: 1rem;">सिर्फ गंभीर छात्रों के लिए</h2>
-            <h1 style="font-size: 2.8rem; font-weight: 800; margin-bottom: 1rem; color: #1e293b;">गणित का डर होगा <span style="color: #ea580c;">हमेशा के लिए खत्म!</span></h1>
-            <p style="font-size: 1.125rem; color: #475569; max-width: 48rem; margin: auto; margin-bottom: 2rem;">यह सिर्फ एक कोर्स नहीं, बल्कि आपके गणित के कमजोर कॉन्सेप्ट्स को जड़ से मजबूत करने का एक मिशन है। आज ही अपनी सफलता की ओर पहला कदम बढ़ाएं।</p>
-            <a href="https://ypsahu.com/single-checkout/685ef965d331d71b43104b06?pid=p4" target="_blank" style="background-color: #ea580c; color: white; font-weight: bold; font-size: 1.125rem; padding: 1rem 2rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; box-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);">सिर्फ ₹49 में कोर्स शुरू करें</a>
-            <p style="margin-top: 1rem; color: #78716c; font-size: 0.9rem;">*सीमित समय ऑफर*</p>
-        </div>
-    </section>
-
-    <!-- Problem Section -->
-    <section style="padding: 4rem 1.5rem; text-align: center; background-color: #ffffff;">
-        <div>
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: #1e293b;">अगर आप भी ऐसा महसूस करते हैं, तो यह कोर्स आपके लिए है...</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; max-width: 64rem; margin: auto; margin-top: 3rem;">
-                <div style="background-color: #fff7ed; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #fed7aa;">
-                    <span style="font-size: 2.25rem;">🤔</span>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #9a3412;">कमजोर बुनियाद</h3>
-                    <p>बेसिक कॉन्सेप्ट्स क्लियर न होने से आगे की पढ़ाई मुश्किल लगती है।</p>
-                </div>
-                <div style="background-color: #fff7ed; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #fed7aa;">
-                    <span style="font-size: 2.25rem;">😟</span>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #9a3412;">परीक्षा का डर</h3>
-                    <p>गणित के पेपर में कम नंबर आने का डर हमेशा बना रहता है।</p>
-                </div>
-                <div style="background-color: #fff7ed; padding: 1.5rem; border-radius: 0.75rem; border: 1px solid #fed7aa;">
-                    <span style="font-size: 2.25rem;">🤯</span>
-                    <h3 style="font-size: 1.25rem; font-weight: 600; margin-top: 1rem; margin-bottom: 0.5rem; color: #9a3412;">आत्मविश्वास की कमी</h3>
-                    <p>लगातार असफल होने से गणित में आत्मविश्वास खत्म हो जाता है।</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="text-center py-16 sm:py-20 px-6 bg-blue-50">
+            <div class="container mx-auto">
+                <h2 class="font-semibold text-blue-600 mb-2">सिर्फ गंभीर छात्रों के लिए</h2>
+                <h1 class="text-3xl sm:text-5xl font-extrabold mb-4 text-slate-900">गणित का डर होगा <span class="gradient-text">हमेशा के लिए खत्म!</span></h1>
+                <p class="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto mb-6">यह सिर्फ एक कोर्स नहीं, बल्कि आपके गणित के कमजोर कॉन्सेप्ट्स को जड़ से मजबूत करने का एक मिशन है। आज ही अपनी सफलता की ओर पहला कदम बढ़ाएं।</p>
+                <div class="flex flex-col items-center gap-4">
+                    <a href="#enroll" class="w-full sm:w-auto bg-blue-600 text-white font-bold text-lg px-8 py-3 rounded-lg hover:bg-blue-700 transition-transform hover:scale-105 inline-block shadow-lg">
+                        आज ही शुरू करें
+                    </a>
+                    <p class="text-red-500 font-bold text-base">🔥 यह स्पेशल ऑफर सिर्फ आज के लिए है! 🔥</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Course Content Section -->
-    <section style="background-color: #f8fafc; padding: 4rem 1.5rem;">
-        <div style="max-width: 72rem; margin: auto;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                 <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: #1e293b;">कोर्स के अंदर आपको क्या मिलेगा?</h2>
-            </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
-                <div style="background-color: #fffbeb; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
-                    <h4 style="font-weight: bold; font-size: 1.125rem; color: #b45309;">संख्या प्रणाली</h4><p style="margin-top: 0.5rem;">संख्याओं के खेल को जड़ से समझिए।</p>
+        </section>
+
+        <!-- Pricing Story Section -->
+        <section class="py-16 sm:py-20 px-6 bg-white">
+            <div class="container mx-auto text-center max-w-3xl">
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">एक ईमानदार कोशिश, हर छात्र के लिए</h2>
+                <p class="text-slate-600 text-lg mb-8">इस कोर्स को बनाने में महीनों की मेहनत और विशेषज्ञता लगी है। इसकी असली कीमत <span class="font-bold text-red-500">₹3200</span> है। लेकिन हमारा मानना है कि भारत में हर छात्र बेहतरीन शिक्षा का हक़दार है, और पैसे इसमें बाधा नहीं बनने चाहिए।</p>
+                <div class="bg-slate-100 border-l-4 border-blue-500 p-6 rounded-r-lg text-left">
+                    <p class="text-slate-700 font-semibold">"इसीलिए, कुछ समय के लिए हमने इस कोर्स की कीमत इतनी कम रखी है कि इसे कोई भी afford कर सके। यह हमारा वादा है कि आपको ₹3200 से भी ज़्यादा की वैल्यू मिलेगी।"</p>
                 </div>
-                <div style="background-color: #fffbeb; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
-                    <h4 style="font-weight: bold; font-size: 1.125rem; color: #b45309;">बीजगणित की मूल बातें</h4><p style="margin-top: 0.5rem;">X और Y के मान निकालना बच्चों का खेल लगेगा।</p>
-                </div>
-                <div style="background-color: #fffbeb; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
-                    <h4 style="font-weight: bold; font-size: 1.125rem; color: #b45309;">ज्यामिति के सिद्धांत</h4><p style="margin-top: 0.5rem;">आकृतियों और कोणों के रहस्यों को जानें।</p>
-                </div>
-                <div style="background-color: #fffbeb; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
-                    <h4 style="font-weight: bold; font-size: 1.125rem; color: #b45309;">वैदिक गणित ट्रिक्स</h4><p style="margin-top: 0.5rem;">कैलकुलेटर से भी तेज गणना करना सीखें।</p>
-                </div>
-                <div style="background-color: #fffbeb; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
-                    <h4 style="font-weight: bold; font-size: 1.125rem; color: #b45309;">रोजमर्रा की जिंदगी में गणित</h4><p style="margin-top: 0.5rem;">जानें कि गणित असल में कैसे काम करता है।</p>
-                </div>
-                <div style="background-color: #fffbeb; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #f59e0b;">
-                    <h4 style="font-weight: bold; font-size: 1.125rem; color: #b45309;">और भी बहुत कुछ!</h4><p style="margin-top: 0.5rem;">आपकी गणित की समझ को नए स्तर पर ले जाएं।</p>
+                <div class="mt-8 flex justify-center items-center gap-4">
+                    <span class="text-4xl font-bold text-slate-400 price-strike">₹3200</span>
+                    <span class="text-5xl font-black text-green-600">सिर्फ ₹49</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- After Course Section -->
-    <section style="background-color: #ffffff; padding: 4rem 1.5rem;">
-        <div style="max-width: 64rem; margin: auto; text-align: center;">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 3rem; color: #1e293b;">कोर्स पूरा करने के बाद आप...</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
-                <div style="background-color: #f0fdf4; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #22c55e;">
-                    <h3 style="font-weight: bold; font-size: 1.125rem; color: #15803d; margin-bottom: 0.5rem;">✔️ हर सवाल को कॉन्फिडेंस से सॉल्व करेंगे</h3>
-                    <p>आपके अंदर किसी भी मुश्किल सवाल को हल करने का आत्मविश्वास होगा।</p>
-                </div>
-                 <div style="background-color: #f0fdf4; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #22c55e;">
-                    <h3 style="font-weight: bold; font-size: 1.125rem; color: #15803d; margin-bottom: 0.5rem;">✔️ गणित आपका पसंदीदा विषय बन जाएगा</h3>
-                    <p>गणित का डर खत्म होगा और आपको इसे पढ़ने में मजा आने लगेगा।</p>
-                </div>
-                <div style="background-color: #f0fdf4; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #22c55e;">
-                    <h3 style="font-weight: bold; font-size: 1.125rem; color: #15803d; margin-bottom: 0.5rem;">✔️ परीक्षा का डर हमेशा के लिए खत्म होगा</h3>
-                    <p>आप परीक्षा के लिए पूरी तरह से तैयार होंगे और अच्छे अंक लाएंगे।</p>
-                </div>
-                 <div style="background-color: #f0fdf4; padding: 1.5rem; border-radius: 0.5rem; border-left: 4px solid #22c55e;">
-                    <h3 style="font-weight: bold; font-size: 1.125rem; color: #15803d; margin-bottom: 0.5rem;">✔️ आपकी सोचने की शक्ति (Logical Thinking) बढ़ेगी</h3>
-                    <p>आपकी तार्किक क्षमता बढ़ेगी जो जीवन के हर क्षेत्र में काम आएगी।</p>
+        <!-- Who is this for Section -->
+        <section class="py-16 sm:py-20 px-6 bg-slate-100">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10 text-slate-900">यह कोर्स किसके लिए एकदम सही है?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <div class="bg-blue-100 text-blue-600 text-4xl w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                            🎓
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800">स्कूल के छात्र</h3>
+                        <p class="text-slate-500">(कक्षा 6 से 12)</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <div class="bg-blue-100 text-blue-600 text-4xl w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                            💼
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800">प्रतियोगी परीक्षाओं के उम्मीदवार</h3>
+                        <p class="text-slate-500">(SSC, Banking, Railway)</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <div class="bg-blue-100 text-blue-600 text-4xl w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                            🏛️
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800">कॉलेज के छात्र</h3>
+                        <p class="text-slate-500">जिन्हें गणित की जरूरत है</p>
+                    </div>
+                    <div class="text-center p-4 bg-white rounded-lg shadow-sm">
+                        <div class="bg-blue-100 text-blue-600 text-4xl w-24 h-24 rounded-full flex items-center justify-center mx-auto mb-4">
+                            🧠
+                        </div>
+                        <h3 class="text-xl font-semibold text-slate-800">हर कोई</h3>
+                        <p class="text-slate-500">जो गणित का डर मिटाना चाहता है</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Chart Section with Static Image -->
-    <section style="padding: 4rem 1.5rem; text-align: center; background-color: #f8fafc;">
-        <div>
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: #1e293b;">देखें कैसे आता है सुधार</h2>
-            <p style="color: #475569; margin-bottom: 3rem; max-width: 42rem; margin-left: auto; margin-right: auto;">यह कोर्स छात्रों के आत्मविश्वास और समस्या-समाधान कौशल में जबरदस्त सुधार लाता है।</p>
-            <div style="max-width: 600px; margin: auto; padding: 1rem; background-color: #ffffff; border-radius: 0.5rem; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);">
-                <img src="https://quickchart.io/chart?c=%7Btype%3A%27bar%27%2Cdata%3A%7Blabels%3A%5B%27%E0%A4%B8%E0%A4%82%E0%A4%96%E0%A5%8D%E0%A4%AF%E0%A4%BE%20%E0%A4%AA%E0%A5%8D%E0%A4%B0%E0%A4%A3%E0%A4%BE%E0%A4%B2%E0%A5%80%27%2C%27%E0%A4%AC%E0%A5%80%E0%A4%9C%E0%A4%97%E0%A4%A3%E0%A4%BF%E0%A4%A4%27%2C%27%E0%A4%9C%E0%A5%8D%E0%A4%AF%E0%A4%BE%E0%A4%AE%E0%A4%BF%E0%A4%A4%E0%A4%BF%27%2C%27%E0%A4%A4%E0%A4%BE%E0%A4%B0%E0%A5%8D%E0%A4%95%E0%A4%BF%E0%A4%95%20%E0%A4%95%E0%A5%8D%E0%A4%B7%E0%A4%AE%E0%A4%A4%E0%A4%BE%27%5D%2Cdatasets%3A%5B%7Blabel%3A%27%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%B8%20%E0%A4%B8%E0%A5%87%20%E0%A4%AA%E0%A4%B9%E0%A4%B2%E0%A5%87%27%2Cdata%3A%5B30%2C25%2C40%2C35%5D%2CbackgroundColor%3A%27rgba(251%2C%20146%2C%2060%2C%200.6)%27%7D%2C%7Blabel%3A%27%E0%A4%95%E0%A5%8B%E0%A4%B0%E0%A5%8D%E0%A4%B8%20%E0%A4%95%E0%A5%87%20%E0%A4%AC%E0%A4%BE%E0%A4%A6%27%2Cdata%3A%5B85%2C90%2C80%2C95%5D%2CbackgroundColor%3A%27rgba(234%2C%2088%2C%2012%2C%200.8)%27%7D%5D%7D%2Coptions%3A%7Btitle%3A%7Bdisplay%3Atrue%2Ctext%3A%27%E0%A4%95%E0%A5%8C%E0%A4%B6%E0%A4%B2%20%E0%A4%AE%E0%A5%87%E0%A4%82%20%E0%A4%B8%E0%A5%81%E0%A4%A7%E0%A4%BE%E0%A4%B0%27%7D%2Cscales%3A%7ByAxes%3A%5B%7Bticks%3A%7BbeginAtZero%3Atrue%2Cmax%3A100%7D%7D%5D%7D%7D%7D" alt="Chart showing improvement in math skills" style="max-width: 100%; height: auto; border-radius: 0.5rem;">
-            </div>
-        </div>
-    </section>
-
-    <!-- About Instructor Section -->
-    <section style="padding: 4rem 1.5rem; background-color: #ffffff;">
-        <div style="max-width: 48rem; margin: auto; text-align: center;">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 2rem; color: #1e293b;">आपके इंस्ट्रक्टर से मिलें</h2>
-            <div style="width: 120px; height: 120px; border-radius: 50%; margin: auto; margin-bottom: 1rem; background-color: #e2e8f0; display: flex; align-items: center; justify-content: center; font-size: 2rem; color: #64748b;">👤</div>
-            <h3 style="font-size: 1.5rem; font-weight: 600; color: #1e293b;">Y.P. Sahu</h3>
-            <p style="color: #ea580c; font-weight: 600; margin-bottom: 1rem;">Maths Expert & Teacher</p>
-            <p style="max-width: 42rem; margin: auto;">"मेरा लक्ष्य गणित को हर छात्र के लिए एक आसान और दिलचस्प विषय बनाना है। मैंने हजारों छात्रों को उनके गणित के डर पर काबू पाने में मदद की है और अब आपकी बारी है।"</p>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section style="padding: 4rem 1.5rem; background-color: #f8fafc;">
-        <div>
-            <h2 style="font-size: 2rem; font-weight: bold; text-align: center; margin-bottom: 3rem; color: #1e293b;">हमारे सफल छात्रों की कहानी</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 56rem; margin: auto;">
-                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.5rem; border-top: 4px solid #f97316;">
-                    <p style="font-style: italic; margin-bottom: 1rem;">"Y.P. Sahu सर का पढ़ाने का तरीका कमाल का है। इस कोर्स ने मेरे लिए गणित को बहुत आसान बना दिया है।"</p>
-                    <p style="font-weight: bold; text-align: right; color: #c2410c;">- राहुल कुमार, पटना</p>
+        <!-- What You Will Get Section -->
+        <section class="bg-white py-16 sm:py-20 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10 text-slate-900">कोर्स के अंदर आपको क्या मिलेगा?</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-sm text-left flex items-start gap-4">
+                        <span class="text-blue-500 text-2xl">📹</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Full HD Video Classes</h3>
+                            <p class="text-slate-600 text-sm">कॉन्सेप्ट्स को क्रिस्टल क्लियर समझें।</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-sm text-left flex items-start gap-4">
+                        <span class="text-blue-500 text-2xl">📝</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Handwritten PDF Notes</h3>
+                            <p class="text-slate-600 text-sm">हर क्लास के बाद रिवीजन के लिए।</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-sm text-left flex items-start gap-4">
+                        <span class="text-blue-500 text-2xl">💬</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Anytime Doubt Support</h3>
+                            <p class="text-slate-600 text-sm">कभी भी कोई सवाल पूछें।</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-sm text-left flex items-start gap-4">
+                        <span class="text-blue-500 text-2xl">👨‍🏫</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Direct Talk with Sir</h3>
+                            <p class="text-slate-600 text-sm">सीधे अपने गुरु से मार्गदर्शन पाएं।</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-sm text-left flex items-start gap-4">
+                        <span class="text-blue-500 text-2xl">⏳</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Lifetime Access</h3>
+                            <p class="text-slate-600 text-sm">एक बार खरीदें, हमेशा के लिए सीखें।</p>
+                        </div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg shadow-sm text-left flex items-start gap-4">
+                        <span class="text-blue-500 text-2xl">🎁</span>
+                        <div>
+                            <h3 class="font-bold text-lg text-slate-800">Practice Questions PDF</h3>
+                            <p class="text-slate-600 text-sm">अपनी तैयारी को और मजबूत करें।</p>
+                        </div>
+                    </div>
                 </div>
-                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.5rem; border-top: 4px solid #f97316;">
-                    <p style="font-style: italic; margin-bottom: 1rem;">"पहले मैं गणित के नाम से ही डरती थी, पर अब यह मेरा पसंदीदा विषय है। धन्यवाद सर!"</p>
-                    <p style="font-weight: bold; text-align: right; color: #c2410c;">- प्रिया शर्मा, जयपुर</p>
-                </div>
-                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.5rem; border-top: 4px solid #f97316;">
-                    <p style="font-style: italic; margin-bottom: 1rem;">"Competitive exams के लिए maths बहुत zaroori है। इस कोर्स ने मेरा base इतना strong कर दिया कि अब मुझे complex problems solve करने में भी डर नहीं लगता।"</p>
-                    <p style="font-weight: bold; text-align: right; color: #c2410c;">- अमित सिंह, प्रयागराज</p>
-                </div>
-                <div style="background-color: #ffffff; padding: 2rem; border-radius: 0.5rem; border-top: 4px solid #f97316;">
-                    <p style="font-style: italic; margin-bottom: 1rem;">"Mai hamesha se maths se door bhagti thi, lekin sir ke padhane ka tarika itna achha hai ki ab mujhe maths mein interest aane laga hai. Thank you so much!"</p>
-                    <p style="font-weight: bold; text-align: right; color: #c2410c;">- सुनीता देवी, लखनऊ</p>
+            </div>
+        </section>
+
+        <!-- After Course Section -->
+        <section class="bg-slate-100 py-16 sm:py-20 px-6">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-10 text-slate-900">कोर्स पूरा करने के बाद आप...</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+                    <div class="bg-green-100 p-5 rounded-lg border-l-4 border-green-500 text-left">
+                        <h3 class="font-bold text-lg text-green-800">✔️ हर सवाल को कॉन्फिडेंस से सॉल्व करेंगे</h3>
+                    </div>
+                    <div class="bg-green-100 p-5 rounded-lg border-l-4 border-green-500 text-left">
+                        <h3 class="font-bold text-lg text-green-800">✔️ गणित आपका पसंदीदा विषय बन जाएगा</h3>
+                    </div>
+                    <div class="bg-green-100 p-5 rounded-lg border-l-4 border-green-500 text-left">
+                        <h3 class="font-bold text-lg text-green-800">✔️ परीक्षा का डर हमेशा के लिए खत्म होगा</h3>
+                    </div>
+                    <div class="bg-green-100 p-5 rounded-lg border-l-4 border-green-500 text-left">
+                        <h3 class="font-bold text-lg text-green-800">✔️ आपकी सोचने की शक्ति (Logical Thinking) बढ़ेगी</h3>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Bonus Section -->
-    <section style="background-color: #ffffff; padding: 4rem 1.5rem;">
-        <div style="max-width: 48rem; margin: auto; text-align: center; border: 2px dashed #f97316; border-radius: 1rem; padding: 2rem; background-color: #fffbeb;">
-            <h2 style="font-size: 2rem; font-weight: bold; margin-bottom: 1rem; color: #9a3412;">🎁 LIMITED TIME BONUS 🎁</h2>
-            <p style="font-size: 1.125rem; color: #475569; margin-bottom: 1.5rem;">अगर आप आज एनरोल करते हैं, तो आपको हमारी **"50+ Practice Questions PDF"** बिल्कुल मुफ़्त मिलेगी!</p>
-            <p style="font-weight: 600;">यह बोनस आपकी तैयारी को और भी मजबूत बनाएगा।</p>
-        </div>
-    </section>
+        </section>
 
-    <!-- Final CTA & Pricing Section -->
-    <section id="enroll" style="background-color: #c2410c; color: white; padding: 4rem 1.5rem; text-align: center;">
-        <div style="background: linear-gradient(to right, #ea580c, #c2410c); padding: 3rem 1.5rem; border-radius: 1rem; max-width: 56rem; margin: auto;">
-            <h2 style="font-size: 2.2rem; font-weight: bold; margin-bottom: 1rem;">अब और इंतजार क्यों?</h2>
-            <p style="font-size: 1.125rem; color: #ffedd5; margin-bottom: 2rem;">गणित में महारत हासिल करने का इससे बेहतर मौका नहीं मिलेगा।</p>
-            
-            <div style="max-width: 350px; margin: auto; text-align: left; background-color: rgba(0,0,0,0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem;">
-                <h3 style="font-weight: bold; margin-bottom: 1rem; text-align: center;">आपको ₹49 में मिलेगा:</h3>
-                <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 0.5rem;">✔️ पूरा "Base of Maths" कोर्स</li>
-                    <li style="margin-bottom: 0.5rem;">✔️ लाइफटाइम वीडियो एक्सेस</li>
-                    <li style="margin-bottom: 0.5rem;">✔️ डायरेक्ट डाउट सपोर्ट</li>
-                    <li>✔️ **BONUS:** 50+ Practice Questions PDF</li>
-                </ul>
+        <!-- About Instructor Section -->
+        <section class="py-16 sm:py-20 px-6 bg-white">
+            <div class="container mx-auto text-center max-w-2xl">
+                <h2 class="text-3xl font-bold mb-8 text-slate-900">आपके इंस्ट्रक्टर से मिलें</h2>
+                <img src="YOUR_IMAGE_URL_HERE" alt="Y.P. Sahu" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover bg-slate-300 border-4 border-white shadow-lg">
+                <h3 class="text-2xl font-bold text-slate-800">Y.P. Sahu</h3>
+                <p class="text-blue-600 font-semibold mb-4">Maths Expert & Teacher</p>
+                <p class="text-slate-600">"मेरा लक्ष्य गणित को हर छात्र के लिए एक आसान और दिलचस्प विषय बनाना है। मैंने हजारों छात्रों को उनके गणित के डर पर काबू पाने में मदद की है और अब आपकी बारी है।"</p>
             </div>
+        </section>
 
-            <div style="margin: 2rem 0; display: inline-block;">
-                <span style="font-size: 3.75rem; font-weight: bold;">₹49</span>
-                <span style="font-size: 1.125rem; color: #fed7aa; margin-left: 0.5rem;">सिर्फ एक बार</span>
+        <!-- Demo Class Section -->
+        <section id="demo" class="py-16 sm:py-20 px-6 bg-slate-100">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4 text-slate-900">पहले इस्तेमाल करें, फिर विश्वास करें!</h2>
+                <p class="text-slate-600 max-w-2xl mx-auto mb-4">ये डेमो क्लासेस सिर्फ आपको हमारे पढ़ाने का तरीका दिखाने के लिए हैं।</p>
+                <p class="bg-yellow-100 text-yellow-800 p-3 rounded-lg max-w-2xl mx-auto mb-10">असली कोर्स पूरी तरह से <span class="font-bold">स्ट्रक्चर्ड तरीके</span> से बनाया गया है, जिसमें हर टॉपिक को शुरू से अंत तक कवर किया गया है।</p>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Video 1 -->
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-xl font-bold text-slate-800">Class 1: Part 1</h3>
+                        <div class="video-container shadow-lg">
+                            <iframe src="https://www.youtube.com/embed/NZwN9l7-jQs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Video 2 -->
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-xl font-bold text-slate-800">Class 2: Part 2</h3>
+                        <div class="video-container shadow-lg">
+                            <iframe src="https://www.youtube.com/embed/E6nZMXK4Y08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <!-- Video 3 -->
+                    <div class="flex flex-col gap-3">
+                        <h3 class="text-xl font-bold text-slate-800">Class 3: Part 3</h3>
+                        <div class="video-container shadow-lg">
+                            <iframe src="https://www.youtube.com/embed/6nVrtjMTiiQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <p style="color: #ffedd5; max-width: 42rem; margin: auto; margin-bottom: 2rem;">यह निवेश आपके आत्मविश्वास और भविष्य के लिए है।</p>
-            <a href="https://ypsahu.com/single-checkout/685ef965d331d71b43104b06?pid=p4" target="_blank" style="background-color: white; color: #ea580c; font-weight: bold; font-size: 1.25rem; padding: 1rem 2.5rem; border-radius: 0.5rem; text-decoration: none; display: inline-block; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">हाँ! मुझे अभी कोर्स खरीदना है</a>
-            <p style="margin-top: 1rem; font-size: 0.9rem; color: #ffedd5;">🔒 30-दिन की मनी-बैक गारंटी | सुरक्षित पेमेंट</p>
-        </div>
-    </section>
-</main>
+        </section>
 
-<!-- Footer -->
-<footer style="background-color: #1e293b; color: #94a3b8; padding: 2rem 1.5rem; text-align: center; margin-top: 0;">
-    <div style="max-width: 1200px; margin: auto;">
-        <h3 style="font-size: 1.25rem; font-weight: 600; color: #ffffff; margin-bottom: 1.5rem;">Y.P. Sahu से जुड़ें</h3>
-        <div style="margin-bottom: 1.5rem;">
-            <a href="https://www.facebook.com/ypsahuofficial" target="_blank" style="background-color: #3b5998; color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; margin: 0 0.5rem; font-family: sans-serif;">Facebook</a>
-            <a href="https://www.instagram.com/ypsahu_official/" target="_blank" style="background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); color: white; padding: 0.5rem 1rem; border-radius: 0.5rem; text-decoration: none; margin: 0 0.5rem; font-family: sans-serif;">Instagram</a>
+        <!-- Testimonials -->
+        <section class="py-16 sm:py-20 px-6 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-3xl font-bold text-center mb-10 text-slate-900">हमारे सफल छात्रों की कहानी</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <p class="text-slate-600 italic mb-4">"Y.P. Sahu सर का पढ़ाने का तरीका कमाल का है। इस कोर्स ने मेरे लिए गणित को बहुत आसान बना दिया है।"</p>
+                        <p class="font-bold text-right text-blue-700">- राहुल कुमार, पटना</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <p class="text-slate-600 italic mb-4">"पहले मैं गणित के नाम से ही डरती थी, पर अब यह मेरा पसंदीदा विषय है। धन्यवाद सर!"</p>
+                        <p class="font-bold text-right text-blue-700">- प्रिया शर्मा, जयपुर</p>
+                    </div>
+                     <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <p class="text-slate-600 italic mb-4">"Competitive exams के लिए maths बहुत zaroori है। इस कोर्स ने मेरा base इतना strong कर दिया कि अब मुझे complex problems solve करने में भी डर नहीं लगता।"</p>
+                        <p class="font-bold text-right text-blue-700">- अमित सिंह, प्रयागराज</p>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-lg border border-slate-200 shadow-sm">
+                        <p class="text-slate-600 italic mb-4">"Mai hamesha se maths se door bhagti thi, lekin sir ke padhane ka tarika itna achha hai ki ab mujhe maths mein interest aane laga hai. Thank you so much!"</p>
+                        <p class="font-bold text-right text-blue-700">- सुनीता देवी, लखनऊ</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- FAQ Section -->
+        <section class="bg-slate-100 py-16 sm:py-20 px-6">
+            <div class="container mx-auto max-w-3xl">
+                <h2 class="text-3xl font-bold text-center mb-10 text-slate-900">अक्सर पूछे जाने वाले प्रश्न (FAQ)</h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Q: यह कोर्स किस भाषा में है?</h3>
+                        <p class="bg-white p-4 rounded-lg border-l-4 border-blue-500">A: यह पूरा कोर्स सरल हिंदी भाषा में सिखाया गया है, ताकि हर कोई आसानी से समझ सके।</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Q: कोर्स खत्म करने में कितना समय लगेगा?</h3>
+                        <p class="bg-white p-4 rounded-lg border-l-4 border-blue-500">A: यह कोर्स लगभग 25 से 30 घंटे का है। आप अपनी सुविधा के अनुसार इसे कभी भी देख सकते हैं।</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Q: क्या ₹49 के अलावा कोई और चार्ज भी है?</h3>
+                        <p class="bg-white p-4 rounded-lg border-l-4 border-blue-500">A: नहीं, यह सिर्फ एक बार की पेमेंट है। इसके बाद कोई अतिरिक्त या छिपा हुआ चार्ज नहीं है और आपको कोर्स का लाइफटाइम एक्सेस मिलता है।</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg text-slate-800 mb-2">Q: अगर मुझे कोर्स पसंद नहीं आया तो?</h3>
+                        <p class="bg-white p-4 rounded-lg border-l-4 border-blue-500">A: यदि आप कोर्स से संतुष्ट नहीं हैं, तो आप 30 दिनों के भीतर पूरे पैसे वापस मांग सकते हैं। आपका संतोष हमारी प्राथमिकता है।</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA & Pricing Section -->
+        <section id="enroll" class="bg-blue-600 text-white py-16 sm:py-20 px-6">
+            <div class="container mx-auto text-center max-w-2xl">
+                <h2 class="text-3xl font-extrabold mb-4">आज ही अपनी सफलता की ओर पहला कदम बढ़ाएं!</h2>
+                <p class="text-blue-200 text-lg mb-8">यह ऑफर सिर्फ आज के लिए है। गणित में महारत हासिल करने का इससे बेहतर मौका नहीं मिलेगा।</p>
+                
+                <div class="bg-white text-slate-800 p-6 sm:p-8 rounded-xl shadow-2xl mb-8">
+                    <h3 class="font-bold text-xl mb-4 text-center">आज की स्पेशल डील में आपको मिलेगा:</h3>
+                    <ul class="space-y-3 text-left">
+                        <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✓</span><span>Full HD Video Classes</span></li>
+                        <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✓</span><span>हर क्लास के Handwritten PDF Notes</span></li>
+                        <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✓</span><span>Anytime Doubt Support</span></li>
+                        <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✓</span><span>Y.P. Sahu Sir से डायरेक्ट बात करने का मौका</span></li>
+                        <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✓</span><span>लाइफटाइम वीडियो एक्सेस</span></li>
+                        <li class="flex items-start gap-3"><span class="text-green-500 mt-1">✓</span><span class="font-bold">BONUS:</span><span> 50+ Practice Questions PDF</span></li>
+                    </ul>
+                    <div class="my-6 text-center">
+                        <span class="text-slate-500 text-2xl price-strike">₹3200</span>
+                        <span class="text-5xl font-extrabold text-slate-900 ml-2">₹49</span>
+                        <span class="text-slate-500 ml-1">सिर्फ आज</span>
+                    </div>
+                    <a href="https://ypsahu.com/single-checkout/685ef965d331d71b43104b06?pid=p4" target="_blank" class="w-full bg-blue-600 text-white font-bold text-lg px-8 py-4 rounded-lg hover:bg-blue-700 transition-transform hover:scale-105 inline-block shadow-lg">
+                        हाँ! मुझे यह ऑफर चाहिए
+                    </a>
+                    <div class="my-4">
+                        <p class="text-slate-600 text-sm">कोई सवाल है?</p>
+                        <a href="https://wa.me/917701903701?text=My%2049%20ka%20course%20Buy%20karna%20chahta%20hun%20ya%20chahti%20hun" target="_blank" class="font-semibold text-blue-600 hover:text-blue-700 inline-flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M16.75 13.96c.25.13.42.3.52.49.1.19.1.42.03.68-.07.26-.28.49-.56.63-.28.14-.62.19-.99.1-.45-.1-.92-.31-1.4-.61-1.33-.82-2.34-1.95-2.93-3.26-.24-.54-.35-1.07-.33-1.58.02-.51.18-1.01.46-1.45.28-.44.66-.78 1.1-.98.44-.2.9-.22 1.35-.06.45.16.81.48 1.03.9.1.2.16.4.19.61.03.21 0 .4-.06.58-.06.18-.18.34-.35.49l-.49.42c-.11.1-.18.23-.22.38-.04.15-.04.31 0 .46.13.47.42.91.83 1.29.41.38.86.67 1.32.82.15.05.3.06.45.03.15-.03.29-.1.4-.2l.44-.37c.17-.14.37-.22.58-.22.21 0 .41.06.58.18l.49.41zM12 2a10 10 0 00-10 10c0 5.52 4.48 10 10 10s10-4.48 10-10c0-5.52-4.48-10-10-10z"/></svg>
+                            WhatsApp पर पूछें
+                        </a>
+                    </div>
+                    <p class="text-sm text-slate-500 mt-4">🛡️ 100% संतुष्टि या 30-दिन में पैसे वापस की गारंटी</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 text-slate-400 py-8 px-6 text-center">
+        <div class="container mx-auto">
+            <h3 class="text-lg font-semibold text-white mb-4">Y.P. Sahu से जुड़ें</h3>
+            <div class="flex justify-center gap-4 mb-6">
+                <a href="https://www.facebook.com/ypsahuofficial" target="_blank" class="text-slate-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" /></svg>
+                </a>
+                <a href="https://www.instagram.com/ypsahu_official/" target="_blank" class="text-slate-400 hover:text-white">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.024.06 1.378.06 3.808s-.012 2.784-.06 3.808c-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.024.048-1.378.06-3.808.06s-2.784-.013-3.808-.06c-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.048-1.024-.06-1.378-.06-3.808s.012-2.784.06-3.808c.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.495 2.525c.636-.247 1.363-.416 2.427-.465C8.93 2.013 9.284 2 11.715 2h.6zm-.6 2.177c-2.447 0-2.788.01-3.833.059a2.725 2.725 0 00-1.898.673 2.725 2.725 0 00-.673 1.898c-.049 1.045-.059 1.386-.059 3.833s.01 2.788.059 3.833a2.725 2.725 0 00.673 1.898 2.725 2.725 0 001.898.673c1.045.049 1.386.059 3.833.059s2.788-.01 3.833-.059a2.725 2.725 0 001.898-.673 2.725 2.725 0 00.673-1.898c.049-1.045.059-1.386.059-3.833s-.01-2.788-.059-3.833a2.725 2.725 0 00-.673-1.898 2.725 2.725 0 00-1.898-.673c-1.045-.049-1.386-.059-3.833-.059zM12 6.865a5.135 5.135 0 100 10.27 5.135 5.135 0 000-10.27zM12 15.4a3.4 3.4 0 110-6.8 3.4 3.4 0 010 6.8z" clip-rule="evenodd" /></svg>
+                </a>
+            </div>
+            <p class="text-sm">&copy; 2025 ypsahu.com. सर्वाधिकार सुरक्षित।</p>
         </div>
-        <p style="font-size: 0.9rem;">&copy; 2025 ypsahu.com. सर्वाधिकार सुरक्षित।</p>
-    </div>
-</footer>
+    </footer>
+
+</body>
+</html>
